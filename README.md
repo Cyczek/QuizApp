@@ -2,15 +2,12 @@
 
 ## 📌 Krótki opis projektu:
 
-```
 Aplikacja React Quiz App pozwala użytkownikowi rozwiązywać quizy pobierane z Open Trivia Database. Użytkownik wybiera kategorię, trudność, typ pytań oraz liczbę pytań, a następnie odpowiada na zestaw wygenerowanych pytań.
-```
 
 ---
 
 ## 📌 Funkcjonalności:
 
-```
 - Pobieranie pytań z API OpenTDB
 - Wybór:
   - kategorii,
@@ -21,7 +18,6 @@ Aplikacja React Quiz App pozwala użytkownikowi rozwiązywać quizy pobierane z 
 - Liczenie poprawnych odpowiedzi
 - Ekran wyników z możliwością restartu quizu
 - Obsługa błędów API wyświetlana bezpośrednio w interfejsie
-```
 
 ---
 
@@ -44,6 +40,8 @@ npm install
 ```
 npm run dev
 ```
+
+---
 
 ## 📌 Link do live demo:
 
