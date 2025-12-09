@@ -22,3 +22,7 @@ Aplikacja React Quiz App pozwala użytkownikowi rozwiązywać quizy pobierane z 
 ---
 
 ## 📌 Instalacja i uruchomienie projektu
+
+## 📌 Link do live demo:
+
+https://quiz-app-six-rose-92.vercel.app/
