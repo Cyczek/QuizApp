@@ -1,13 +1,16 @@
 # React Quiz App
 
-## 📌 Krótki opis projektu
+## 📌 Krótki opis projektu:
 
+```
 Aplikacja React Quiz App pozwala użytkownikowi rozwiązywać quizy pobierane z Open Trivia Database. Użytkownik wybiera kategorię, trudność, typ pytań oraz liczbę pytań, a następnie odpowiada na zestaw wygenerowanych pytań.
+```
 
 ---
 
-## 📌 Funkcjonalności
+## 📌 Funkcjonalności:
 
+```
 - Pobieranie pytań z API OpenTDB
 - Wybór:
   - kategorii,
@@ -18,11 +21,32 @@ Aplikacja React Quiz App pozwala użytkownikowi rozwiązywać quizy pobierane z 
 - Liczenie poprawnych odpowiedzi
 - Ekran wyników z możliwością restartu quizu
 - Obsługa błędów API wyświetlana bezpośrednio w interfejsie
+```
 
 ---
 
-## 📌 Instalacja i uruchomienie projektu
+## 📌 Instalacja i uruchomienie projektu:
+
+1.Sklonuj repozytorium
+
+```
+git clone https://github.com/Cyczek/QuizApp.git
+```
+
+2.Zainstaluj potrzebne moduły
+
+```
+npm install
+```
+
+3.Uruchom aplikację
+
+```
+npm run dev
+```
 
 ## 📌 Link do live demo:
 
+```
 https://quiz-app-six-rose-92.vercel.app/
+```

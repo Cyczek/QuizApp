@@ -1,6 +1,7 @@
 # struktura projektu:
 
 ````
+    ```
 QuizApp/
     docs/       #Struktura programu
     │
