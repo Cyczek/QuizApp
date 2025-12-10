@@ -46,8 +46,11 @@ export function QuizProvider({ children }) {
       if (e.type === 1) {
         setError(e.message);
         setErrorDetails(e.details);
+      } else if (e.type === 2) {
+        setError(e.message);
+      } else {
+        setError("Nie udało się uruchomić quizu.");
       }
-
       return false;
     } finally {
       setLoading(false);
