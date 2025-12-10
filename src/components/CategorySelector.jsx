@@ -7,7 +7,7 @@ export default function CategorySelector() {
     <select
       className="category-selector"
       value={category}
-      onChangeCapture={(e) => setCategory(e.target.value)}
+      onChange={(e) => setCategory(e.target.value)}
     >
       <option>Wszystkie kategorie</option>
       {categories.map((cat) => (
