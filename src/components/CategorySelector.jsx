@@ -9,10 +9,10 @@ export default function CategorySelector() {
       value={category}
       onChange={(e) => setCategory(e.target.value)}
     >
-      <option>Wszystkie kategorie</option>
-      {categories.map((cat) => (
-        <option key={cat.id} value={cat.id}>
-          {cat.name}
+      <option value="">Wszystkie kategorie</option>
+      {categories.map((a) => (
+        <option key={a.id} value={a.id}>
+          {a.name}
         </option>
       ))}
     </select>
