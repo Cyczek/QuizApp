@@ -7,7 +7,7 @@ export default function CategorySelector() {
     <select
       className="category-selector"
       value={category}
-      onMouseDown={(e) => setCategory(e.target.value)}
+      onChangeCapture={(e) => setCategory(e.target.value)}
     >
       <option>Wszystkie kategorie</option>
       {categories.map((cat) => (
