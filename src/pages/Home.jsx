@@ -33,15 +33,15 @@ export default function Home() {
                 Wybrana trudność: <strong>{errorDetails.difficulty}</strong>
               </div>
               <div>
-                Wybrana kategoria:{" "}
+                Wybrana kategoria:
                 <strong>{errorDetails.category || "dowolna"}</strong>
               </div>
               <div>
-                Żądana liczba pytań:{" "}
+                Żądana liczba pytań:
                 <strong>{errorDetails.amountRequested}</strong>
               </div>
               <div>
-                Typ pytań:{" "}
+                Typ pytań:
                 <strong>{errorDetails.typeRequested || "dowolny"}</strong>
               </div>
               <div>Spróbuj zmienić liczbę pytań, kategorię lub trudność.</div>
