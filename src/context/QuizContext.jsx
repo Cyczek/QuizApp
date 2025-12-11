@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { getCategories, getQuestions } from "../api/TriviaAPI";
 
+// Provider udostępniający stan całej aplikacji
 export const QuizContext = createContext();
 
 export function QuizProvider({ children }) {
@@ -17,6 +18,7 @@ export function QuizProvider({ children }) {
   const [type, setType] = useState("");
   const [quizStarted, setQuizStarted] = useState(false);
 
+  // Pobiera kategorie przy starcie
   useEffect(() => {
     async function fetchCats() {
       try {
@@ -29,6 +31,7 @@ export function QuizProvider({ children }) {
     fetchCats();
   }, []);
 
+  // Uruchamia quiz
   async function startQuiz() {
     setLoading(true);
     setError(null);
@@ -43,6 +46,7 @@ export function QuizProvider({ children }) {
       setQuizStarted(true);
       return true;
     } catch (e) {
+      // Obsługa błędów
       if (e.type === 1) {
         setError(e.message);
         setErrorDetails(e.details);
@@ -57,17 +61,20 @@ export function QuizProvider({ children }) {
     }
   }
 
+  // Czyści błędy
   function clearError() {
     setError(null);
     setErrorDetails(null);
   }
 
+  // Obsługuje wybór odpowiedzi
   function selectAnswer(answer) {
     if (!questions[index]) return;
     if (questions[index].correct === answer) setScore((s) => s + 1);
     setIndex((i) => i + 1);
   }
 
+  // Resetuje quiz
   function resetQuiz() {
     setQuestions([]);
     setIndex(0);
@@ -77,6 +84,7 @@ export function QuizProvider({ children }) {
     setErrorDetails(null);
   }
 
+  // Udostępnia dane przez Provider
   return (
     <QuizContext.Provider
       value={{

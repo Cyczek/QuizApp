@@ -1,5 +1,6 @@
 import useQuiz from "../hooks/useQuiz";
 
+// Select z listą kategorii
 export default function CategorySelector() {
   const { categories, category, setCategory } = useQuiz();
 
@@ -10,9 +11,9 @@ export default function CategorySelector() {
       onChange={(e) => setCategory(e.target.value)}
     >
       <option value="">Wszystkie kategorie</option>
-      {categories.map((a) => (
-        <option key={a.id} value={a.id}>
-          {a.name}
+      {categories.map((cat) => (
+        <option key={cat.id} value={cat.id}>
+          {cat.name}
         </option>
       ))}
     </select>

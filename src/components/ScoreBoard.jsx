@@ -1,3 +1,4 @@
+// Wyświetla aktualny wynik
 export default function ScoreBoard({ score, total }) {
   return (
     <div className="scoreboard">

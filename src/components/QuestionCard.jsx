@@ -1,5 +1,6 @@
 import AnswerButton from "./AnswerButton";
 
+// Wyświetla pytanie i odpowiedzi
 export default function QuestionCard({ question, answers, onSelect }) {
   return (
     <div className="question-card">

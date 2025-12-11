@@ -7,10 +7,12 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import AmountSelector from "../components/AmountSelector";
 import TypeSelector from "../components/TypeSelector";
 
+// Ekran konfiguracji quizu
 export default function Home() {
   const { startQuiz, loading, error, errorDetails, clearError } = useQuiz();
   const navigate = useNavigate();
 
+  // Uruchamia quiz i przechodzi do /quiz
   async function handleStart() {
     const success = await startQuiz();
     if (success) navigate("/quiz");

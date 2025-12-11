@@ -1,5 +1,6 @@
 import useQuiz from "../hooks/useQuiz";
 
+// Select z typami pytań
 export default function TypeSelector() {
   const { type, setType } = useQuiz();
 

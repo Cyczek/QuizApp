@@ -1,5 +1,6 @@
 import useQuiz from "../hooks/useQuiz";
 
+// Select z poziomami trudności
 export default function DifficultySelector() {
   const { difficulty, setDifficulty } = useQuiz();
 

@@ -1,9 +1,11 @@
+// Pobiera listę kategorii z API
 export async function getCategories() {
   const res = await fetch("https://opentdb.com/api_category.php");
   const data = await res.json();
   return data.trivia_categories;
 }
 
+// Pobiera pytania quizowe na podstawie parametrów
 export async function getQuestions(difficulty, category, amount = 10, type) {
   const url = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=${type}${
     category ? `&category=${category}` : ""
@@ -11,6 +13,7 @@ export async function getQuestions(difficulty, category, amount = 10, type) {
   const res = await fetch(url);
   const data = await res.json();
 
+  // Obsługa błędu: za mało pytań
   if (data.response_code === 1) {
     throw {
       type: 1,
@@ -25,6 +28,7 @@ export async function getQuestions(difficulty, category, amount = 10, type) {
     };
   }
 
+  // Obsługa błędu: rate limiting
   if (data.response_code === 5) {
     throw {
       type: 2,
@@ -33,6 +37,7 @@ export async function getQuestions(difficulty, category, amount = 10, type) {
     };
   }
 
+  // Transformuje i miesza odpowiedzi
   return data.results.map((q) => ({
     question: q.question,
     correct: q.correct_answer,

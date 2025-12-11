@@ -1,3 +1,4 @@
+// Wyświetla tytuł aplikacji
 export default function Header() {
   return (
     <header className="header">

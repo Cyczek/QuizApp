@@ -4,11 +4,14 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import ScoreBoard from "../components/ScoreBoard";
 import { useNavigate } from "react-router-dom";
 
+// Ekran z pytaniami
 export default function Quiz() {
   const { questions, index, selectAnswer, loading, score } = useQuiz();
   const navigate = useNavigate();
 
   if (loading) return <LoadingSpinner />;
+
+  // Koniec quizu - przechodzi do wyników
   if (index >= questions.length) {
     navigate("/result");
     return null;

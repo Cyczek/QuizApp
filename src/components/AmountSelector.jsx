@@ -1,5 +1,6 @@
 import useQuiz from "../hooks/useQuiz";
 
+// Input do wyboru liczby pytań
 export default function AmountSelector() {
   const { amount, setAmount } = useQuiz();
 
